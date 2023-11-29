@@ -1,0 +1,53 @@
+<html>
+<script>
+    function editProfile() {
+        document.querySelector('.container').style.display = 'none'
+        document.querySelector('.container-edit').style.display = 'block'
+
+        const name = document.querySelector('#name').textContent
+        document.querySelector('#input-name').value = name
+
+        const email = document.querySelector('#email').textContent
+        document.querySelector('#input-email').value = email
+
+        const Interests = document.querySelector('#interest').textContent
+        document.querySelector('#input-interest').value = interests
+    }
+
+    function saveProfile() {
+        document.querySelector('#name').textContent = document.querySelector('#input-name').value
+        document.querySelector('#email').textContent = document.querySelector('#input-email').value
+        document.querySelector('#interests').textContent = document.querySelector('#input-interests').value
+
+        document.querySelector('.container').style.display = 'block'
+        document.querySelector('.container-edit').style.display = 'none'
+    }
+
+
+</script>
+
+
+<body>
+    <div class="container">
+        <h1 id="header">User Profile</h1>
+        <img src="profile-picture">
+        Name: <h3 id="name">Studious Monk</h3>
+        <hr />
+        Email: <h3 id="email">studious.monk@example.com</h3>
+        <hr />
+        <button class="button" onclick="editProfile()">Edit Profile</button>
+    </div>
+    <div class="container-edit">
+        <h1 id="header">User Profile</h1>
+        <img src="profile-picture">
+        Name: <h3 id="input-name">Studious Monk</h3>
+        <hr />
+        Email: <h3 id="input-email">studious.monk@example.com</h3>
+        <hr />
+        Interests: <h3 id="input-interests" type="text"></h3>
+        <hr />
+        <button class="button" onclick="saveProfile()">Save Profile</button>
+    </div>
+</body>
+
+</html>
