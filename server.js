@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/profile-picture', function (req, res) {
-    var img = fs.readFileSync('profile-1.jpg');
+    var img = fs.readFileSync('chameleon.png');
     res.writeHead(200, { 'Content-Type': 'image/jpg' });
     res.end(img, 'binary');
 });
